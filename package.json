@@ -1,0 +1,18 @@
+{
+  "name": "serverless-graphql-appsync-rds",
+  "version": "1.0.0",
+  "main": "handler.js",
+  "author": "Lukas Wittich",
+  "license": "MIT",
+  "dependencies": {
+    "babel-loader": "^7.1.5",
+    "knex": "^0.15.1",
+    "mysql": "^2.15.0",
+    "path": "^0.12.7",
+    "serverless-appsync-plugin": "^1.0.1",
+    "serverless-offline": "^3.25.6",
+    "serverless-webpack": "^5.2.0",
+    "webpack": "^4.16.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

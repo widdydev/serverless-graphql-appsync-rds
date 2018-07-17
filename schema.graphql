@@ -1,0 +1,63 @@
+﻿type Author {
+  id: ID
+  firstname: String
+  lastname: String
+  posts: [Post]!
+}
+
+type Post {
+  id: ID
+  text: String
+  created_at: String
+  comments: [Comment]!
+  author: Author
+}
+
+input PostAddInput {
+  text: String!
+  author: ID!
+}
+
+input PostUpdateInput {
+  id: ID!
+  text: String
+  author: ID
+}
+
+type Comment {
+  id: ID
+  text: String
+  created_at: String
+  author: Author
+}
+
+input CommentAddInput {
+  text: String!
+  author: ID!
+  post: ID!
+}
+
+input CommentUpdateInput {
+  id: ID!
+  text: String
+  author: ID
+  post: ID
+}
+
+type Query {
+  getAuthor(id: ID!): Author
+  getAuthors: [Author]!
+  getPost(id: ID!): Post
+  getPosts(author: ID!): [Post]!
+  getComment(id: ID!): Comment
+  getComments(post: ID!): [Comment]!
+}
+
+type Mutation {
+  addPost(input: PostAddInput!): Post
+  updatePost(input: PostUpdateInput!): Post
+  deletePost(id: ID!): Post
+  addComment(input: CommentAddInput!): Comment
+  updateComment(input: CommentUpdateInput!): Comment
+  deleteComment(id: ID!): Comment
+}
