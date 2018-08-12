@@ -33,84 +33,84 @@ custom:
         type: Query
         field: getAuthor
         request: "getAuthor-request-mapping-template.txt"
-        response: "getAuthor-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       - dataSource: Lambda
         type: Query
         field: getAuthors
         request: "getAuthors-request-mapping-template.txt"
-        response: "getAuthors-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       - dataSource: Lambda
         type: Query
         field: getPost
         request: "getPost-request-mapping-template.txt"
-        response: "getPost-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       - dataSource: Lambda
         type: Query
         field: getPosts
         request: "getPosts-request-mapping-template.txt"
-        response: "getPosts-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       - dataSource: Lambda
         type: Query
         field: getComment
         request: "getComment-request-mapping-template.txt"
-        response: "getComment-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       - dataSource: Lambda
         type: Query
         field: getComments
         request: "getComments-request-mapping-template.txt"
-        response: "getComments-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       # Mutation mapping templates
       - dataSource: Lambda
         type: Mutation
         field: addPost
         request: "addPost-request-mapping-template.txt"
-        response: "addPost-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       - dataSource: Lambda
         type: Mutation
         field: updatePost
         request: "updatePost-request-mapping-template.txt"
-        response: "updatePost-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       - dataSource: Lambda
         type: Mutation
         field: deletePost
         request: "deletePost-request-mapping-template.txt"
-        response: "deletePost-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       - dataSource: Lambda
         type: Mutation
         field: addComment
         request: "addComment-request-mapping-template.txt"
-        response: "addComment-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       - dataSource: Lambda
         type: Mutation
         field: updateComment
         request: "updateComment-request-mapping-template.txt"
-        response: "updateComment-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       - dataSource: Lambda
         type: Mutation
         field: deleteComment
         request: "deleteComment-request-mapping-template.txt"
-        response: "deleteComment-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       # Type mapping templates
       - dataSource: Lambda
         type: Author
         field: posts
         request: "authorPosts-request-mapping-template.txt"
-        response: "authorPosts-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       - dataSource: Lambda
         type: Post
         field: comments
         request: "postComments-request-mapping-template.txt"
-        response: "postComments-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       - dataSource: Lambda
         type: Post
         field: author
         request: "postAuthor-request-mapping-template.txt"
-        response: "postAuthor-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
       - dataSource: Lambda
         type: Comment
         field: author
         request: "commentAuthor-request-mapping-template.txt"
-        response: "commentAuthor-response-mapping-template.txt"
+        response: "generic-response-mapping-template.txt"
 
     serviceRole: "AppSyncServiceRole"
     dataSources:

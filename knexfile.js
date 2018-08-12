@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 const mysql = require('mysql');
 
 module.exports = {

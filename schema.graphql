@@ -54,10 +54,17 @@ type Query {
 }
 
 type Mutation {
-  addPost(input: PostAddInput!): Post
-  updatePost(input: PostUpdateInput!): Post
-  deletePost(id: ID!): Post
-  addComment(input: CommentAddInput!): Comment
-  updateComment(input: CommentUpdateInput!): Comment
-  deleteComment(id: ID!): Comment
+  addPost(input: PostAddInput!): Post!
+  updatePost(input: PostUpdateInput!): Post!
+  deletePost(id: ID!): Post!
+  addComment(input: CommentAddInput!): Comment!
+  updateComment(input: CommentUpdateInput!): Comment!
+  deleteComment(id: ID!): Comment!
+}
+
+type Subscription {
+	addedPost(author_id: ID!): Post!
+		@aws_subscribe(mutations: ["addPost"])
+	addedComment(author_id: ID, post_id: ID): Comment!
+		@aws_subscribe(mutations: ["addComment"])
 }
